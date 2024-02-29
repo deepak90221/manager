@@ -1,8 +1,4 @@
-# Starter pipeline
-# Start with a minimal pipeline that you can customize to build and deploy your code.
-# Add steps that build, run tests, deploy, and more:
-# https://aka.ms/yaml
-
+# YAML pipeline for building Java program and running Python code
 trigger:
 - master
 
@@ -18,3 +14,7 @@ steps:
     script: |
       javac HelloWorld.java
       java HelloWorld
+
+- script: |
+    python your_python_script.py
+  displayName: 'Run Python script'
